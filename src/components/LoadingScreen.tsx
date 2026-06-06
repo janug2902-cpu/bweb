@@ -210,25 +210,27 @@ return ( <div className="fixed inset-0 z-[99999] bg-[#05060d] overflow-hidden">
           >
             {[0, 1, 2, 3].map(
               (index) => (
-                <input
-                  key={index}
-                  id={`digit-${index}`}
-                  maxLength={1}
-                  value={
-                    digits[index]
-                  }
-                  onChange={(e) =>
-                    handleChange(
-                      e.target.value,
-                      index
-                    )
-                  }
-                  className={`pin-box ${
-  error
-    ? "border-red-500"
-    : ""
-}`}
-                />
+               <input
+  key={index}
+  id={`digit-${index}`}
+  type="tel"
+  inputMode="numeric"
+  pattern="[0-9]*"
+  autoComplete="off"
+  maxLength={1}
+  value={digits[index]}
+  onChange={(e) =>
+    handleChange(
+      e.target.value,
+      index
+    )
+  }
+  className={`pin-box ${
+    error
+      ? "border-red-500"
+      : ""
+  }`}
+/>
               )
             )}
           </div>
