@@ -173,7 +173,16 @@ export default function LetterSection() {
             </p>
 
             <p>
-              Never stop being you.
+             Sabke Efforts Different hote hai madam.
+            </p>
+
+            <p>
+             Still Love that girl the one i met.
+            </p>
+
+
+            <p>
+              Never stop being you Love You ❤️.
             </p>
           </div>
 
@@ -190,7 +199,7 @@ export default function LetterSection() {
               text-[#d9a5a5]
               "
             >
-              Janu ❤️
+              Jagu ❤️
             </div>
 
           </div>

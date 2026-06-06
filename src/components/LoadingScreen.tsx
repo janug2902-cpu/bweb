@@ -5,10 +5,12 @@ import { AnimatePresence, motion } from "framer-motion";
 
 interface Props {
 onComplete: () => void;
+ onUnlock?: () => void;
 }
 
 export default function LoadingScreen({
-onComplete,
+  onComplete,
+  onUnlock,
 }: Props) {
 const [digits, setDigits] = useState([
 "",
@@ -103,6 +105,7 @@ if (code !== "0701") {
 }
 
 paperRef.current?.play();
+onUnlock?.();
 
 setPhase("opening");
 

@@ -139,7 +139,7 @@ You deserve that happiness.
 
               <div className="text-right mt-10">
                 <span className="signature">
-                  Janu ❤️
+                  Jagu ❤️
                 </span>
               </div>
             </motion.div>

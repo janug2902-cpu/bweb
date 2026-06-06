@@ -22,7 +22,9 @@ if (!audio) return;
 
 audio.volume = 0;
 
-audio.play().catch(() => {});
+audio.play().catch((err) => {
+  console.log("Autoplay blocked:", err);
+});
 
 let volume = 0;
 

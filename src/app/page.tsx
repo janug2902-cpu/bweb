@@ -12,62 +12,58 @@ import ThreeLettersSection from "@/components/ThreeLettersSection";
 import GiftBoxSection from "@/components/GiftBoxSection";
 import BirthdayWishSection from "@/components/BirthdayWishSection";
 import FooterSection from "@/components/FooterSection";
+
 import CustomCursor from "@/components/CustomCursor";
 import Fireflies from "@/components/Fireflies";
 import VinylPlayer from "@/components/VinylPlayer";
 import BackgroundMusic from "@/components/BackgroundMusic";
 
 export default function HomePage() {
-const [unlocked, setUnlocked] =
-useState(false);
+  const [unlocked, setUnlocked] = useState(false);
+  const [musicStarted, setMusicStarted] = useState(false);
 
-const [musicStarted, setMusicStarted] =
-useState(false);
-
-return (
-<> <BackgroundMusic
-     startMusic={musicStarted}
-   />
-
-  {!unlocked && (
-    <LoadingScreen
-      onComplete={() => {
-        setMusicStarted(true);
-
-        setUnlocked(true);
-      }}
-    />
-  )}
-
-  {unlocked && (
+  return (
     <>
-      <CustomCursor />
+      <BackgroundMusic startMusic={musicStarted} />
 
-      <Fireflies />
+      {!unlocked && (
+       <LoadingScreen
+  onUnlock={() => {
+    setMusicStarted(true);
+  }}
+  onComplete={() => {
+    setUnlocked(true);
+  }}
+/>
+      )}
 
-      <VinylPlayer />
+      {unlocked && (
+        <>
+          <CustomCursor />
 
-      <main className="relative overflow-hidden">
-        <HeroSection />
+          <Fireflies />
 
-        <StoryIntro />
+          <VinylPlayer />
 
-        <ScrapbookSection />
+          <main className="relative overflow-hidden">
+            <HeroSection />
 
-        <LetterSection />
+            <StoryIntro />
 
-        <ThreeLettersSection />
+            <ScrapbookSection />
 
-        <GiftBoxSection />
+            <LetterSection />
 
-        <BirthdayWishSection />
+            <ThreeLettersSection />
 
-        <FooterSection />
-      </main>
+            <GiftBoxSection />
+
+            <BirthdayWishSection />
+
+            <FooterSection />
+          </main>
+        </>
+      )}
     </>
-  )}
-</>
-
-
-);
+  );
 }
