@@ -110,9 +110,6 @@ setTimeout(() => {
   setPhase("letter");
 }, 1800);
 
-setTimeout(() => {
-  setPhase("letter");
-}, 1800);
 
 setTimeout(() => {
   onComplete();
@@ -162,7 +159,9 @@ return ( <div className="fixed inset-0 z-[99999] bg-[#05060d] overflow-hidden">
           opacity: 0,
         }}
       >
-        <div className="text-center max-w-xl w-full">
+        {/* <div className="text-center max-w-xl w-full"> */}
+
+        <div className="text-center max-w-xl w-full relative z-50">
 
           <motion.div
             animate={{
@@ -180,6 +179,7 @@ return ( <div className="fixed inset-0 z-[99999] bg-[#05060d] overflow-hidden">
               <div className="envelope-flap" />
             </div>
           </motion.div>
+
 
           <h1
   className="
@@ -201,18 +201,23 @@ return ( <div className="fixed inset-0 z-[99999] bg-[#05060d] overflow-hidden">
           </p>
 
           <div
-            className="
-            flex
-            justify-center
-            gap-3
-            mt-8
-            "
-          >
+  className="
+  flex
+  justify-center
+  gap-3
+  mt-8
+  relative
+  z-[100]
+  "
+>
             {[0, 1, 2, 3].map(
               (index) => (
                <input
   key={index}
   id={`digit-${index}`}
+  autoCapitalize="off"
+  autoCorrect="off"
+  spellCheck={false}
   type="tel"
   inputMode="numeric"
   pattern="[0-9]*"
