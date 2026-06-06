@@ -51,42 +51,36 @@ export default function ScrapbookSection() {
 
         {/* Heading */}
 
-        <div className="text-center mb-40">
-          <p
-            className="
-            font-hand
-            text-5xl
-            text-[#d9a5a5]
-            "
-          >
-            Our Memory Wall
-          </p>
+        <div className="text-center mb-32">
+  <p className="font-hand text-4xl text-[#d9a5a5]">
+    Our Memory Wall
+  </p>
 
-          <h2
-            className="
-            mt-6
-            font-display
-            text-6xl
-            md:text-8xl
-            "
-          >
-            Pieces Of Us
-          </h2>
+  <h2
+    className="
+    font-display
+    text-5xl
+    md:text-7xl
+    lg:text-8xl
+    leading-none
+    mt-2
+    "
+  >
+    Pieces Of Us
+  </h2>
 
-          <p
-            className="
-            mt-6
-            max-w-2xl
-            mx-auto
-            text-[#d8cfc5]
-            text-lg
-            "
-          >
-            Every picture here is a tiny reminder
-            that life became a little brighter
-            because you were in it.
-          </p>
-        </div>
+  <p
+    className="
+    mt-6
+    max-w-3xl
+    mx-auto
+    text-lg
+    text-[#d8cfc5]
+    "
+  >
+    Every picture here is a tiny reminder that life became a little brighter because you were in it.
+  </p>
+</div>
 
         {/* Polaroids */}
 <div
@@ -95,7 +89,7 @@ export default function ScrapbookSection() {
   md:grid-cols-2
   lg:grid-cols-3
   gap-16
-  mt-32
+  mt-48
   "
 >
           {memories.map((memory, index) => (
@@ -231,7 +225,14 @@ export default function ScrapbookSection() {
             are the ones we never planned.
           </p>
 
-          <p className="mt-6">
+          <p
+  className="
+  mt-6
+  max-w-3xl
+  mx-auto
+  text-center
+  "
+>
             Somehow, most of mine include you.
           </p>
         </motion.div>
