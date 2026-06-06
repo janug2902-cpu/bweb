@@ -18,7 +18,11 @@ const rotations = [
 ];
 
 export default function ScrapbookSection() {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<{
+  image: string;
+  title: string;
+  caption: string;
+} | null>(null);
 
   return (
     <section
