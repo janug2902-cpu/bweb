@@ -270,7 +270,7 @@ export default function GiftBoxSection() {
                   text-[#d9a5a5]
                   "
                 >
-                  ❤️ Janu
+                  ❤️ Jagu
                 </div>
               </div>
             </motion.div>

@@ -212,7 +212,7 @@ export default function BirthdayWishSection() {
             delay: 1,
           }}
         >
-          ❤️ Janu
+          ❤️ Jagu
         </motion.div>
       </div>
     </section>
